@@ -1,0 +1,12 @@
+object {Type*:network} {Name:UDO-SITES-RANGE}
+ {Attribute:subnet} {IPAddress:20.52.1.0} {Subnet:255.255.255.0}
+object {Type*:network} {Name:JBO-CHANGEER-UNT}
+ {Attribute:host} {IPAddress:100.20.0.13}
+object {Type*:network} {Name:TLD-COMSTOR-TNT}
+ {Attribute:host} {IPAddress:90.90.0.168}
+object {Type*:service} {Name:82}
+ {Attribute:service} {Protocol:tcp} {Property:destination} {ComparisonOperator:eq} {Value:umpt} 
+object {Type*:network} {Name:TTL-FIB-PARENTS}
+ {Attribute:subnet} {IPAddress:192.16.0.0} {Subnet:255.255.252.0}
+object {Type*:service} {Name:8000}
+ {Attribute:service} {Protocol:tcp} {Property:destination} {ComparisonOperator:eq} {Value:8000} 
