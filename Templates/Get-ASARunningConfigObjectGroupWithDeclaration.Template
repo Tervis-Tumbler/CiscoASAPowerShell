@@ -1,0 +1,12 @@
+object-group {Type*:service} {Name:Flubber}
+ {Declaration*:{Name:service-object} {Type:object} {Protocol:RTP}} 
+ {Declaration*:{Name:service-object} {Type:object} {Protocol:capf}} 
+ {Declaration*:{Name:service-object} {Type:object} {Protocol:sip-over-tls}} 
+object-group {Type*:network} {Name:OBJ-NETWORKS}
+ {Declaration*:{Name:network-object} {IPAddress:1.0.222.0} {Subnet:255.255.255.0}}
+object-group {Type*:network} {Name:OBJ-BS3-SOURCE}
+ {Declaration*:{Name:network-object} {Type:host} {IPAddress:100.237.33.10}}
+object-group {Type*:service} {Name:UP_FORWARD_3} {Protocol:tcp}
+ {Declaration*:{Type:group-object} {Name:imap4s}}
+ {Declaration*:{Type:group-object} {Name:smtprelay}}
+ {Declaration*:{Type:port-object} {ComparisonOperator:eq} {Value:https}} 
