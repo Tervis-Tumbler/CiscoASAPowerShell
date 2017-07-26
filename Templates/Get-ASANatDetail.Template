@@ -1,0 +1,9 @@
+13 ({FromInterface*:TOPGEAR}) to ({ToInterface:INET-150TO}) source static {FromObject:OBJ-SOMETHING-INT} {ToObject:OBJ-CUD-TXT-202}  
+    translate_hits = {translate_hits:5124}, untranslate_hits = {untranslate_hits:36409}
+    Source - Origin: {Origin:192.172.42.225/32}, Translated: {Translated:122.3.132.63/32}
+22 ({FromInterface*:COORATEY}) to ({ToInterface:TUNET-RALF}) source static {FromObject:OBJ-DOPLER-INT} {ToObject:OBJ-THING-EXT-THING}  
+    translate_hits = {translate_hits:146192}, untranslate_hits = {untranslate_hits:165834}
+    Source - Origin: {Origin:102.12.44.105/32}, Translated: {Translated:203.95.44.139/32}
+12 ({FromInterface*:COPOTATOE}) to ({ToInterface:TURT-OTHER}) source static {FromObject:ENT-INF-RAINING01} {ToObject:TOT-FLUBBER-EXT}  
+    translate_hits = {translate_hits:3868}, untranslate_hits = {untranslate_hits:26020}
+    Source - Origin: {Origin:11.33.48.20/32}, Translated: {Translated:22.85.33.151/32}
