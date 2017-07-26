@@ -1,0 +1,27 @@
+Username     : {Username*:name-place}         Index        : 389
+Assigned IP  : {AssignedIP:100.12.8.0}              Public IP    : {PublicIP:20.24.79.18}
+Protocol     : {Protocol:IKEv1 IPsecOverNatT}
+License      : Other VPN
+Encryption   : IKEv1: (1)3DES  IPsecOverNatT: (19)AES128
+Hashing      : IKEv1: (1)SHA1  IPsecOverNatT: (19)SHA1
+Bytes Tx     : 1600644167             Bytes Rx     : 1224253002
+Group Policy : {GroupPolicy:TG-ADA}             Tunnel Group : {TunnelGroup:FE-VPN}
+Login Time   : {LoginTime:09:04:01 EDT Mon May 22 2017}
+Duration     : {Duration:9d 7h:55m:39s}
+Inactivity   : {Inactivity:0h:00m:00s}
+NAC Result   : Unknown
+VLAN Mapping : N/A                    VLAN         : none
+
+Username     : {Username*:VPN-Tunnel}            Index        : 412
+Assigned IP  : {AssignedIP:200.62.12.0}            Public IP    : {PublicIP:13.33.67.2}
+Protocol     : {Protocol:IKEv1 IPsecOverNatT}
+License      : Other VPN
+Encryption   : IKEv1: (1)3DES  IPsecOverNatT: (18)AES128
+Hashing      : IKEv1: (1)SHA1  IPsecOverNatT: (18)SHA1
+Bytes Tx     : 2735066569             Bytes Rx     : 1934514552
+Group Policy : {GroupPolicy:TG-ADA}             Tunnel Group : {TunnelGroup:BA-VNN}
+Login Time   : {LoginTime:09:04:05 EDT Mon May 22 2017}
+Duration     : {Duration:9d 7h:55m:35s}
+Inactivity   : {Inactivity:0h:00m:00s}
+NAC Result   : Unknown
+VLAN Mapping : N/A                    VLAN         : none
