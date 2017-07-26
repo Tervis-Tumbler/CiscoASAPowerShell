@@ -1,0 +1,9 @@
+object-group {Type*:service} {Name:Flubber}
+ {Declaration*:{Name:service-object} {Type:object} {Protocol:RTP}} 
+ {Declaration*:{Name:service-object} {Type:object} {Protocol:capf}} 
+ {Declaration*:{Name:service-object} {Type:object} {Protocol:sip-over-tls}} 
+object-group {Type*:network} {Name:All-NETWORKS}
+ {Declaration*:{Name:network-object} {IPAddress:100.22.2.10} {Subnet:255.255.255.0}}
+ {Declaration*:{Name:network-object} {IPAddress:29.52.0.0} {Subnet:255.255.224.0}}
+object-group {Type*:network} {Name:OBJ-BS3-SOURCE}
+ {Declaration*:{Name:network-object} {Type:host} {IPAddress:171.23.253.10}}
