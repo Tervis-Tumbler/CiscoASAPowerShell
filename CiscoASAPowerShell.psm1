@@ -64,10 +64,6 @@ function Get-ASANatDetail {
     Invoke-ASACommandWithTemplate -Command "show nat detail"
 }
 
-function Get-CiscoASAPowerShellModulePath {
-    (Get-Module -ListAvailable CiscoASAPowerShell).ModuleBase
-}
-
 function New-ASACommandResultTemplate {
     param(
         $Command,
