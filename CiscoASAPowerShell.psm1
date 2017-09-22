@@ -89,11 +89,11 @@ function Edit-ASACommandResultTemplate {
 function Invoke-ASACommandWithTemplate {
     param(
         [Parameter(Mandatory)]$Command,
-        $FunctionName = (Get-Variable MyInvocation -Scope 1).Value.MyCommand.Name
+        $FunctionName = (Get-Variable MyInvocation -Scope 1).Value.MyCommand.Name,
+        [ValidateSet("FlashExtract","Regex")]$TemplateType = "FlashExtract"
     )
     $Result = Invoke-ASACommand -Command $Command
-    $ModulePath = Get-CiscoASAPowerShellModulePath
-    $Result | ConvertFrom-String -TemplateFile "$ModulePath\Templates\$FunctionName.Template"
+    Invoke-StringToPSCustomObjectTemplate -ModuleName CiscoASAPowerShell -String $Result -FunctionName $FunctionName -TemplateType $TemplateType
 }
 
 function Get-ASAVPNSessiondbRAIkev1Ipsec {
