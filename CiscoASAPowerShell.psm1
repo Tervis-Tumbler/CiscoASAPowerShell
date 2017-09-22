@@ -68,32 +68,22 @@ function Get-CiscoASAPowerShellModulePath {
     (Get-Module -ListAvailable CiscoASAPowerShell).ModuleBase
 }
 
-function Invoke-TervisNetworkSSHCommandWithTemplate {
-    param(
-        $SSHSession,
-        $Command,
-        $FunctionName = (Get-Variable MyInvocation -Scope 1).Value.MyCommand.Name
-    )
-    $CommandTemplate = Get-Content "$PSScriptRoot\$FunctionName.Template" | Out-String
-    Invoke-SSHCommandWithTemplate -SSHSession $SSHSession -Command "show ip arp" -CommandTemplate $CommandTemplate
-}
-
 function New-ASACommandResultTemplate {
     param(
         $Command,
-        $FunctionName
+        $FunctionName,
+        [ValidateSet("FlashExtract","Regex")]$TemplateType = "FlashExtract"
     )
-    $ModulePath = Get-CiscoASAPowerShellModulePath
     $CommandResult = Invoke-ASACommand -Command $Command
-    $CommandResult | Out-File "$ModulePath\Templates\$FunctionName.Template" -Encoding ascii
+    New-StringToPSCustomObjectTemplate -String $CommandResult -FunctionName $FunctionName -ModuleName CiscoASAPowerShell -TemplateType $TemplateType
 }
 
 function Edit-ASACommandResultTemplate {
     param(
-        $FunctionName
+        $FunctionName,
+        [ValidateSet("FlashExtract","Regex")]$TemplateType = "FlashExtract"
     )
-    $ModulePath = Get-CiscoASAPowerShellModulePath
-    Invoke-Item "$ModulePath\Templates\$FunctionName.Template" 
+    Edit-StringToPSCustomObjectTemplate -FunctionName $FunctionName -ModuleName CiscoASAPowerShell -TemplateType $TemplateType
 }
 
 function Invoke-ASACommandWithTemplate {
